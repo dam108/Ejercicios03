@@ -1,0 +1,54 @@
+/* CORRECCIÓN DE ERRORES*/
+
+package ejercicios;
+import java.util.Scanner;
+public class foroejbucle {
+    public static void main(String[] args) {
+        int num;
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Introduce un número natural entre 1 y 1000: ");
+        num = teclado.nextInt();
+        if (num < 1 || num > 1000) { // cambio (num < 0  || num > 1000) por ( num < 1 || num > 1000 ) para que nos imprima numero icorrecto si se introducen numeros que no sean comprendidos del 1 al 1000
+            System.out.println("Numero incorrecto.");
+        }
+        else {
+            for (int i = num; i>=1; i--){ // cambiamos el mientras num >= 1 por i >= 1
+              if (num % i == 0 ){ 
+                  System.out.println(i);
+              }  
+            }
+        }
+    }
+}
+
+el programa lo que hace es que nos pide un numero entre 1 y 1000 
+coje ese numero y hace una cuenta regresiva desde ese numero hasta 1
+pero de esa cuenta regresiva solo imprime los numeros que sean divisores ( que el resultado de dividir nuestro numero entre cada uno de los de la cuenta regresiva sea = 0) 
+
+ ¿ COMO MEJORARIRAS EL FUNCIONAMIENTO ?
+
+Se mejoraria haciendo que el for ya no cuente de la mitad en adelante puesto que los divisores de un numero nunca pasan de la mitad.
+y el uno tb siempre es divisor asi que empezamos en 2.
+
+package ejercicios;
+import java.util.Scanner;
+public class foroejbucle {
+    public static void main(String[] args) {
+        int num;
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Introduce un número natural entre 1 y 1000: ");
+        num = teclado.nextInt();
+        if (num < 1 || num > 1000) { // cambio (num < 0  || num > 1000) por ( num < 1 || num > 1000 ) para que nos imprima numero icorrecto si se introducen numeros que no sean comprendidos del 1 al 1000
+            System.out.println("Numero incorrecto.");
+        }
+        else {
+            System.out.println(num);
+            for (int i = num/2; i>=2; i--){ // cambiamos el mientras num >= 1 por i >= 1
+              if (num % i == 0 ){ 
+                  System.out.println(i);
+              }  
+            }
+        }
+        System.out.println(1);
+    }
+}

@@ -1,0 +1,21 @@
+/* EXPLICACIÓN */
+
+public class Ejercicios {
+
+    public static void main(String[] args) {
+
+        int hora=0;
+
+        for (int i=1;i<=7*24;i++) { // EMPIEZA UNA ITERACION EN 1 MIENTRAS i SEA MENOR O IGUAL A 7*24 ( CANTIDAS DE HORAS QUE TIENE UNA SEMANA) 
+
+            System.out.println (hora); // IMPRIME LA VARIABLE HORA QUE EN ESTE MOMENTO TIENE VALOR CERO
+
+            if (++hora > 23) hora=0; // SI A LA HORA QUE AUMENTA ES MAYOR QUE 23 LA HORA PASA A SER CERO
+
+        }
+    } //fin main
+} //fin clase
+
+// En un principio pense que no hacia nada , por que no conocia esa manera de utilzar los operadores ( ++variable) por lo que puedo ver ejecutando el codigo
+// la ultima condición escrita de esa manera imprime los numero del 0 al 23 siete veces, mientras que si lo pones al reves (variable++) imprime del 0 al 24 seis veces y una del 0 al 17 
+// asi que supongo que el ejercicio trata de descubrir que esa manera de utilizar el operador antes de la variable se usa para tener exactitud a la hora de mostrar todos los numeros
